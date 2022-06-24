@@ -1,0 +1,39 @@
+$white:#ffffff;
+$black:#000;
+$gray:#333333;
+$red:#EB5757;
+$white-gray:#F2F2F2;
+$second-gray:#E0E0E0;
+$yellow:#EABF3C;
+$fonts: ('Roboto-Bold', 700),
+('Roboto-Medium', 500),
+('Roboto-Regular', 400),
+('Lobster-Regular', 400);
+
+@each $name,
+$weight in $fonts {
+    @font-face {
+        font-family: $name;
+        src: url('../fonts/#{$name}.ttf');
+        font-weight: $weight;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    max-width: 1680px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100%;
+    background: url("../images/body-background.webp") no-repeat center center/cover;
+}
