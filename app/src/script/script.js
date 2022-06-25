@@ -11,9 +11,10 @@ let position = 0
 const nextSlide = () => {
     if (screen.matches && position < ((img.length - 3) * imgWidth.clientWidth)) {
         position += imgWidth.clientWidth
-
-    } else if (position < ((img.length - 2) * imgWidth.clientWidth)){
+        console.log('asd');
+    } else if (!screen.matches && position < ((img.length - 2) * imgWidth.clientWidth)){
         position += imgWidth.clientWidth
+        console.log('dd');
     } else{
         position = 0
     }
